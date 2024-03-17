@@ -47,3 +47,8 @@ export const ProductCardPrice = styled.p`
   font-weight: 700;
   color: ${colors.text.title};
 `;
+
+export const ProductCardOption = styled.label`
+  display: flex;
+  justify-content: space-around;
+`;

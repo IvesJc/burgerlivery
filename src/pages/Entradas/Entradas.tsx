@@ -1,8 +1,9 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Button, CategoryList, Layout, ProductCard } from "../../components";
 import { ProductCategories, ProductWrapper } from "./Entradas.style";
 import {
   ProductCardContent,
+  ProductCardOption,
   ProductCardPrice,
 } from "../../components/ProductCard/ProductCard.style";
 
@@ -10,6 +11,11 @@ export default function Entradas() {
   const [isLoading, setIsLoading] = useState(false);
   const [categories, setCategories] = useState([]);
   const [products, setProducts] = useState([]);
+  const [selectedOption, setSelectedOption] = useState<boolean>()
+
+  const handleRadioButtonOption = (event: React.ChangeEvent<HTMLInputElement>) => {
+    selectedOption(event.target.value);
+  }
 
   const priceFormat = (price: number) => {
     return new Intl.NumberFormat("pt-BR", {
@@ -81,6 +87,20 @@ export default function Entradas() {
               <ProductCardContent>
                 <h2>{product.title}</h2>
                 <p>{product.description}</p>
+                <ProductCardOption>
+                <label>
+                  <input 
+                    type="radio"
+                    onChange={handleRadioButtonOption} />
+                    Small
+                </label>
+                <label>
+                  <input 
+                    type="radio"
+                    onChange={handleRadioButtonOption} />
+                    Large
+                </label>
+                </ProductCardOption>
                 <Button onClick={() => {}}>Adicionar</Button>
               </ProductCardContent>
 

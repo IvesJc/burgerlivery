@@ -94,7 +94,7 @@ export default function Entradas() {
                     value={0}
                     type="radio"
                     onChange={handleRadioButtonOption} />
-                    Small
+                    Pequeno
                 </label>
                 <label>
                   <input 
@@ -102,7 +102,7 @@ export default function Entradas() {
                     value={1}
                     type="radio"
                     onChange={handleRadioButtonOption} />
-                    Large
+                    Grande
                 </label>
                 </ProductCardOption>
                 <Button onClick={() => {}}>Adicionar</Button>

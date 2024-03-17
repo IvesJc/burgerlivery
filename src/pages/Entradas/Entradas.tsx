@@ -90,12 +90,16 @@ export default function Entradas() {
                 <ProductCardOption>
                 <label>
                   <input 
+                    name="size"
+                    value={0}
                     type="radio"
                     onChange={handleRadioButtonOption} />
                     Small
                 </label>
                 <label>
                   <input 
+                    name="size"
+                    value={1}
                     type="radio"
                     onChange={handleRadioButtonOption} />
                     Large
@@ -105,7 +109,7 @@ export default function Entradas() {
               </ProductCardContent>
 
               <ProductCardPrice>
-                {priceFormat(product.value)}
+                {priceFormat(product.value.small)}
               </ProductCardPrice>
               <img src={product.image} alt={product.title} />
             </ProductCard>

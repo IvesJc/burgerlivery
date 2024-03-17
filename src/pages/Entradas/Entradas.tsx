@@ -109,7 +109,8 @@ export default function Entradas() {
               </ProductCardContent>
 
               <ProductCardPrice>
-                {priceFormat(product.value.small)}
+                <p>Pequeno</p>{priceFormat(product.value.small)}
+                <p>Grande</p>{priceFormat(product.value.large)}
               </ProductCardPrice>
               <img src={product.image} alt={product.title} />
             </ProductCard>

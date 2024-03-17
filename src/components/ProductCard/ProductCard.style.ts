@@ -16,6 +16,7 @@ export const ProductCardElement = styled.div`
     height: 225px;
     border-top-left-radius: 28px;
     border-top-right-radius: 28px;
+    object-fit: cover;
   }
 `;
 

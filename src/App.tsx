@@ -5,6 +5,7 @@ import Entradas from "./pages/Entradas/Entradas";
 import Bebidas from "./pages/Bebidas/Bebidas";
 import Sobremesas from "./pages/Sobremesas/Sobremesas";
 import Login from "./pages/Login/Login";
+import Combo from "./pages/Combo/Combo";
 
 export default function App() {
   return (
@@ -16,6 +17,7 @@ export default function App() {
         <Route path="/entradas" element={<Entradas />} />
         <Route path="/bebidas" element={<Bebidas />} />
         <Route path="/sobremesas" element={<Sobremesas />} />
+        <Route path="/combo" element={<Combo />} />
       </Routes>
     </BrowserRouter>
   );
